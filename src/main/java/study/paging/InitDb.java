@@ -34,18 +34,22 @@ public class InitDb {
             MemberInfo memberInfo = new MemberInfo("서울");
             MemberInfo memberInfo1 = new MemberInfo("경기");
            MemberInfo memberInfo2 = new MemberInfo("천안");
+           MemberInfo memberInfo3 = new MemberInfo("수원");
 
             em.persist(memberInfo);
             em.persist(memberInfo1);
             em.persist(memberInfo2);
+            em.persist(memberInfo3);
 
             Member member = Member.addMember("찬우","qwer","1234",memberInfo);
             Member member1 = Member.addMember("훈일","asdf","1234",memberInfo1);
             Member member2 = Member.addMember("성호","zxcv","1234",memberInfo2);
+            Member member3 = Member.addMember("준장","uiop","1234",memberInfo3);
 
             em.persist(member);
             em.persist(member1);
             em.persist(member2);
+            em.persist(member3);
 
             //찬우가 방을 3개 만듬
             Reserve reserve1 = Reserve.createReserve(member, "A", "helloA");
@@ -60,12 +64,16 @@ public class InitDb {
             //성호가 만든방
             Reserve reserve6 = Reserve.createReserve(member2, "F", "helloF");
 
+            // 준장이가 방 1개를 만듬
+            Reserve reserve7 = Reserve.createReserve(member3, "G", "helloG");
+
             em.persist(reserve1);
             em.persist(reserve2);
             em.persist(reserve3);
             em.persist(reserve4);
             em.persist(reserve5);
             em.persist(reserve6);
+            em.persist(reserve7);
 
             em.flush();
 
