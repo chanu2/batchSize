@@ -18,6 +18,8 @@ public class MemberInfo {
     private Long id;
 
     private String address;
+    
+    private String nikname;
 
     public MemberInfo(String address) {
         this.address = address;
