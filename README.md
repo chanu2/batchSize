@@ -1,2 +1,2 @@
 # batchSize
-study collectio
+study collection fetch join
